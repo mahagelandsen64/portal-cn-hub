@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>易倍体育｜持续关注 · 专业平台</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f0f5fa;
+      color: #1a2a3a;
+      line-height: 1.6;
+      padding: 1.5rem 1rem 3rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1120px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(2px);
+      border-radius: 2rem;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 12px 28px rgba(0, 40, 50, 0.08);
+    }
+
+    /* 蓝绿点缀调色板 */
+    :root {
+      --teal-400: #20b2aa;
+      --teal-600: #0e7c7a;
+      --blue-300: #7bc8e8;
+      --blue-500: #2a8eb5;
+      --slate-100: #e2edf2;
+      --slate-200: #cbdbe5;
+      --card-bg: #ffffff;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.8rem;
+      border-bottom: 1px solid var(--slate-200);
+      padding-bottom: 1.5rem;
+    }
+
+    .platform-name {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      background: linear-gradient(135deg, #0e7c7a 0%, #2a8eb5 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      color: #3f5a65;
+      margin-top: 0.4rem;
+      border-left: 3px solid var(--teal-400);
+      padding-left: 1rem;
+      display: inline-block;
+      background: rgba(32, 178, 170, 0.04);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .hero-summary {
+      background: var(--card-bg);
+      border-radius: 24px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 2.2rem;
+      box-shadow: 0 4px 12px rgba(20, 80, 90, 0.06);
+      border: 1px solid var(--slate-100);
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .hero-summary h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #1b3b42;
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-summary p {
+      font-size: 1rem;
+      color: #2f4a55;
+      max-width: 680px;
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      margin: 2rem 0;
+    }
+
+    @media (min-width: 540px) {
+      .highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 840px) {
+      .highlights-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 1.5rem;
+      padding: 1.5rem 1.2rem;
+      border: 1px solid #d7e3e9;
+      box-shadow: 0 4px 10px rgba(30, 100, 110, 0.04);
+      transition: box-shadow 0.2s, transform 0.1s;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 18px rgba(14, 124, 122, 0.10);
+      transform: translateY(-2px);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #0d5b65;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card h3::before {
+      content: "▹";
+      color: var(--teal-400);
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #31505b;
+    }
+
+    .usage-section {
+      background: #e9f2f6;
+      border-radius: 1.8rem;
+      padding: 1.8rem 2rem;
+      margin: 2rem 0;
+    }
+
+    .usage-section h3 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #135a62;
+      margin-bottom: 1rem;
+    }
+
+    .usage-steps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      list-style: none;
+    }
+
+    .usage-steps li {
+      flex: 1 1 180px;
+      background: white;
+      border-radius: 2rem;
+      padding: 1rem 1.2rem;
+      border-left: 3px solid var(--teal-400);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+      font-size: 0.95rem;
+      color: #1c4050;
+    }
+
+    .usage-steps li strong {
+      color: #0b6b6a;
+      font-weight: 600;
+    }
+
+    .trust-note {
+      background: white;
+      border-radius: 28px;
+      padding: 1.6rem 1.8rem;
+      margin: 2rem 0 1.8rem;
+      border: 1px solid #c8dbe5;
+    }
+
+    .trust-note p {
+      font-size: 0.95rem;
+      color: #2a4b57;
+      margin-bottom: 0.6rem;
+    }
+
+    .trust-note a {
+      color: #0e7c7a;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted var(--teal-400);
+    }
+
+    .trust-note a:hover {
+      color: #064e4d;
+      border-bottom-style: solid;
+    }
+
+    .faq-summary {
+      background: var(--card-bg);
+      border-radius: 1.5rem;
+      padding: 1.5rem 1.8rem;
+      margin-top: 0.8rem;
+      border: 1px solid #d0e0e8;
+    }
+
+    .faq-summary details {
+      margin-bottom: 0.8rem;
+      border-bottom: 1px solid #dae8ef;
+      padding-bottom: 0.6rem;
+    }
+
+    .faq-summary details:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .faq-summary summary {
+      font-weight: 500;
+      color: #175e66;
+      cursor: pointer;
+      padding: 0.3rem 0;
+      font-size: 0.95rem;
+    }
+
+    .faq-summary summary::marker {
+      color: var(--teal-400);
+    }
+
+    .faq-summary p {
+      margin-top: 0.3rem;
+      color: #2b4f5c;
+      font-size: 0.9rem;
+      padding-left: 0.4rem;
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: #5c7a85;
+      border-top: 1px solid #cbdbe5;
+      padding-top: 1.2rem;
+    }
+
+    .inline-link {
+      display: inline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="platform-name">易倍体育</div>
+      <div class="tagline">持续关注 · 专业内容聚合</div>
+    </header>
+
+    <!-- 摘要区 -->
+    <div class="hero-summary">
+      <h2>再次访问与收藏的理由</h2>
+      <p>信息密度与视觉效率并重。无论是浏览赛事动态、体系化内容，还是定期回查，<a href="https://cn-yibeisports.com" style="color:#0e7c7a; font-weight:500; text-decoration:underline dotted;">易倍体育</a>均以清晰的分类和克制的呈现方式降低信息过载。平台侧重结构化输出，适合作为长期关注入口。</p>
+    </div>
+
+    <!-- 网格卡片：亮点 -->
+    <div class="highlights-grid">
+      <div class="card">
+        <h3>栏目化沉淀</h3>
+        <p>内容按主题板块划分，便于定向检索。无论是回顾历史专题还是追踪近期更新，均能快速定位。</p>
+      </div>
+      <div class="card">
+        <h3>低噪界面</h3>
+        <p>无弹窗、无冗余动效，蓝绿色辅助线强化视觉层次。页面节奏舒缓，适合深度浏览与收藏。</p>
+      </div>
+      <div class="card">
+        <h3>高频内容源</h3>
+        <p>保持合理更新频率，同时避免信息轰炸。用户可按照自己的节奏回归，不必担心内容过载。</p>
+      </div>
+      <div class="card">
+        <h3>标签式导航</h3>
+        <p>分类标签清晰，支持按兴趣筛选。从赛事摘要到背景解读，信息颗粒度可调。</p>
+      </div>
+      <div class="card">
+        <h3>收藏友好</h3>
+        <p>页面结构稳定，不频繁改版。适合加入浏览器书签或保存至阅读列表，长期访问路径不变。</p>
+      </div>
+      <div class="card">
+        <h3>响应式阅读</h3>
+        <p>移动端与桌面端版式适配统一，卡片布局自动调整。无论用何种设备再次打开，体验一致。</p>
+      </div>
+    </div>
+
+    <!-- 使用建议 / 场景 -->
+    <div class="usage-section">
+      <h3>使用建议 · 持续关注的节奏</h3>
+      <ul class="usage-steps">
+        <li><strong>定期回访</strong> · 每 3–5 天一次，浏览新增板块或更新摘要，避免信息堆积。</li>
+        <li><strong>收藏至书签</strong> · 直接将 <a href="https://cn-yibeisports.com" style="color:#0e7c7a; font-weight:600;">易倍体育</a> 加入浏览器书签栏，便于日常快速进入。</li>
+        <li><strong>主题式阅读</strong> · 利用平台分类，一次专注一个领域，提升信息吸收效率。</li>
+        <li><strong>搭配笔记工具</strong> · 对有启发的段落或数据做轻量记录，形成个人知识库。</li>
+      </ul>
+    </div>
+
+    <!-- 可信但克制的说明 -->
+    <div class="trust-note">
+      <p>本页面仅为信息介绍，内容由平台方维护。所有数据与表述均基于可验证的公开信息，不包含主观业绩承诺或诱导性表述。用户可根据自身需要，自行判断是否将 <a href="https://cn-yibeisports.com">易倍体育</a> 列入常用访问列表。</p>
+      <p style="margin-top:0.4rem; font-size:0.9rem;">建议在熟悉平台内容结构后，再决定是否长期保留书签。理性选择，保持信息自主权。</p>
+    </div>
+
+    <!-- FAQ摘要 -->
+    <div class="faq-summary">
+      <details>
+        <summary>是否需要注册才能浏览大部分内容？</summary>
+        <p>平台多数栏目可直接查看，部分深度板块可能需要简单账户验证。具体以实际页面提示为准。</p>
+      </details>
+      <details>
+        <summary>内容更新频率如何？</summary>
+        <p>保持周期性更新，但不会每日大量推送。适合不希望被打扰、但希望定期获取优质内容的用户。</p>
+      </details>
+      <details>
+        <summary>移动端与桌面端体验有区别吗？</summary>
+        <p>核心内容与导航一致。移动端采用卡片流式布局，操作区域更大；桌面端则利用网格展示更多预览。</p>
+      </details>
+      <details>
+        <summary>书签收藏后，链接是否会变化？</summary>
+        <p>主域名与核心路径保持长期稳定。若将来有结构微调，平台会保留必要的重定向。</p>
+      </details>
+    </div>
+
+    <div class="footer-note">
+      <a href="https://cn-yibeisports.com" style="color:#0e7c7a; text-decoration:none; font-weight:500;">易倍体育</a> · 持续关注，理性选择
+    </div>
+  </div>
+</body>
+</html>

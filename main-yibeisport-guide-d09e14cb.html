@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>易倍体育 · 产品介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(145deg, #fde9db 0%, #f9d5b8 45%, #f2c4a0 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            line-height: 1.6;
+            color: #2d241c;
+        }
+        .card {
+            max-width: 820px;
+            width: 100%;
+            background: rgba(255, 251, 245, 0.88);
+            backdrop-filter: blur(2px);
+            border-radius: 48px 24px 48px 24px;
+            box-shadow: 0 18px 36px -12px rgba(120, 70, 40, 0.28), 0 6px 14px rgba(0,0,0,0.04);
+            padding: 2.5rem 2.8rem;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255, 240, 225, 0.6);
+        }
+        @media (max-width: 600px) {
+            body { padding: 1rem; }
+            .card { padding: 1.8rem 1.2rem; border-radius: 32px 16px 32px 16px; }
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #4f2f1a;
+            margin-bottom: 0.2rem;
+            border-left: 5px solid #ca8f65;
+            padding-left: 1rem;
+        }
+        .subhead {
+            font-size: 1rem;
+            color: #7f5f45;
+            margin-bottom: 1.8rem;
+            padding-left: calc(1rem + 5px);
+            font-weight: 420;
+        }
+        .section-title {
+            font-weight: 500;
+            font-size: 1.2rem;
+            color: #4f2f1a;
+            margin: 1.6rem 0 0.6rem 0;
+            letter-spacing: 0.3px;
+        }
+        p {
+            margin-bottom: 1rem;
+            color: #3d2c1f;
+        }
+        .highlight-blocks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.1rem;
+            margin: 1.2rem 0 1.6rem 0;
+        }
+        .highlight-item {
+            background: #fef6ef;
+            border-radius: 24px 12px 24px 12px;
+            padding: 1rem 1.3rem;
+            flex: 1 1 180px;
+            box-shadow: 0 4px 8px rgba(150, 90, 50, 0.06);
+            border: 1px solid #f1ddd0;
+        }
+        .highlight-item strong {
+            display: block;
+            font-size: 1rem;
+            color: #7a4c2b;
+            margin-bottom: 0.2rem;
+        }
+        .highlight-item span {
+            font-size: 0.92rem;
+            color: #4e3a2b;
+        }
+        .tip-note {
+            background: #ede0d3;
+            border-radius: 20px 8px 20px 8px;
+            padding: 0.9rem 1.5rem;
+            margin: 1.6rem 0 1.2rem 0;
+            font-size: 0.95rem;
+            color: #3d2c1f;
+            border-left: 4px solid #b58057;
+        }
+        .faq-mini {
+            background: #faf2e9;
+            border-radius: 20px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.6rem 0 0.8rem 0;
+        }
+        .faq-mini dt {
+            font-weight: 500;
+            color: #4f2f1a;
+            margin-top: 0.6rem;
+        }
+        .faq-mini dt:first-of-type {
+            margin-top: 0;
+        }
+        .faq-mini dd {
+            margin-left: 0.3rem;
+            color: #3d2c1f;
+            font-size: 0.95rem;
+            border-bottom: 1px dashed #e7d4c3;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
+        }
+        .faq-mini dd:last-of-type {
+            border-bottom: none;
+        }
+        .link-sentence {
+            font-size: 1rem;
+            background: #fef6ef;
+            padding: 0.8rem 1.2rem;
+            border-radius: 60px 16px 60px 16px;
+            display: inline-block;
+            margin: 0.6rem 0 0.2rem 0;
+            box-shadow: 0 2px 6px rgba(100, 60, 30, 0.04);
+        }
+        a {
+            color: #9b5f34;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 2px solid #ddbc9f;
+            padding-bottom: 1px;
+            transition: all 0.15s;
+        }
+        a:hover {
+            color: #632f0e;
+            border-bottom-color: #b07b54;
+            background: rgba(215, 170, 130, 0.08);
+            border-radius: 12px;
+        }
+        .footer-note {
+            margin-top: 1.8rem;
+            font-size: 0.85rem;
+            color: #836b57;
+            border-top: 1px solid #eddccf;
+            padding-top: 1.2rem;
+            text-align: left;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #e4cfbf;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>再次遇见 · 易倍体育</h1>
+        <div class="subhead">一段叙述，一种持续的陪伴</div>
+
+        <p>有些页面，来一次便足够；而有些，值得你放进书签，在需要的时刻重新打开。这并不是什么惊天动地的宣言，只是关于一个产品的朴素介绍——<a href="https://main-yibeisport.com">易倍体育</a>，我们在过去一段时间里反复打磨，也一直在维护更新的方向。</p>
+
+        <p>如果你曾经访问过，或许能察觉一些细微的变化：更克制的信息层次，更干净的浏览节奏。如果你第一次来，那正好——下面这些内容，或许可以帮你快速建立印象。</p>
+
+        <div class="section-title">▎它侧重什么</div>
+        <div class="highlight-blocks">
+            <div class="highlight-item">
+                <strong>内容聚合</strong>
+                <span>将体育相关的资讯、动态与数据以相对简洁的方式组织，减少无关干扰。</span>
+            </div>
+            <div class="highlight-item">
+                <strong>持续更新</strong>
+                <span>不是静态页面，而是有维护节奏的站点，信息随赛季与热点推进。</span>
+            </div>
+            <div class="highlight-item">
+                <strong>低门槛浏览</strong>
+                <span>不强制注册，不堆砌弹窗，所有内容对访客直接可读。</span>
+            </div>
+        </div>
+
+        <div class="section-title">▎使用场景参考</div>
+        <p>无论是快速浏览当日要点，还是想回顾某个联赛的近期动态，<a href="https://main-yibeisport.com">易倍体育</a>都可以作为一个轻量的信息锚点。适合在通勤间隙、午休时段，或是打开电脑后顺手扫一眼——不需要太多承诺，也不需要提前预设立场。</p>
+
+        <p>也适合将页面添加到浏览器收藏夹或主屏幕。毕竟，一个你愿意再次访问的页面，往往不需要靠推送提醒来证明自己的价值。</p>
+
+        <div class="tip-note">
+            📎 如果你习惯定期回来看看，这或许就是我们最理想的使用关系：你来，它在，内容自然更新。
+        </div>
+
+        <div class="section-title">▎一些你可能在意的事</div>
+        <div class="faq-mini">
+            <dl>
+                <dt>这个网站是否收费？</dt>
+                <dd>不收费。所有公开内容均可直接浏览，没有隐藏付费模块。</dd>
+                <dt>信息更新频率如何？</dt>
+                <dd>根据赛事节奏和内容整理周期更新，非实时滚动，但保持有效连贯。</dd>
+                <dt>是否收集个人数据？</dt>
+                <dd>站点没有设置强制追踪或用户档案系统，仅使用基础运行必需的匿名日志。</dd>
+                <dt>为什么值得再次访问？</dt>
+                <dd>因为好的内容不需要一次全部吞下；慢慢看，反而更清楚。</dd>
+            </dl>
+        </div>
+
+        <div class="link-sentence">
+            ⇢ 如果你愿意，可以将 <a href="https://main-yibeisport.com">易倍体育</a> 放入你的常访列表。
+        </div>
+
+        <div class="footer-note">
+            <span style="opacity: 0.7;">本页仅为产品介绍，不构成任何形式的诱导或承诺。</span><br>
+            信息更新于近期 · 页面设计随季节调色
+        </div>
+    </div>
+</body>
+</html>
